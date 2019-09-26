@@ -3,7 +3,7 @@ import base64
 import binascii
 import sys
 
-import dex_account_pb2
+import examples.dex_account_pb2 as dex_account_pb2
 
 from google.protobuf.internal.decoder import _DecodeVarint32
 from google.protobuf.internal.decoder import _DecodeVarint

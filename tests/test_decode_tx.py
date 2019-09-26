@@ -3,15 +3,10 @@ import os
 import requests
 import json
 
-parent_directory = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
-sys.path.append(parent_directory)
-sys.path.append(parent_directory+'/examples')
-
 from examples import decode_tx
 from examples import dex_account_pb2
 
-
-if __name__ == "__main__":
+def decode_test():
     txs = [
         "xQHwYl3uCkwqLIf6CiIKFBfeDAE1Xd8LQ4CjSsv6LHAaWQWnEgoKA0JOQhD67+UGEiIKFBfeDAE1Xd8LQ4CjSsv6LHAaWQWnEgoKA0JOQhD67+UGEnEKJuta6YchA/qw8WAGFELktqI1NXDsYK9sMp61T3UElWjgTBkmEyWqEkBhdJhl4wZLLjyhmkcKFkfL8vpFmiEfVejZgNX/tcdmZjuhCQUvZql85K++MQS+1C8qcZ+YSAgdU5bgX7mZyTnUGK6tBiCCAg==",
         "4wHwYl3uCmjObcBDChR+NoVC8WSqtpuzHENnYAtG+wFJFBIuN0UzNjg1NDJGMTY0QUFCNjlCQjMxQzQzNjc2MDBCNDZGQjAxNDkxNC0xODU0OBoLUEhCLTJERl9CTkIgAigBMJusBTiAgJPotRVAARJxCibrWumHIQIO+XNEPzoixFyv5bUDgbweD5e+EjSFGwX//GAJFZD6WxJAcWgjCaBpxQv2UyLY6YZ4Wlfx15Gef8tmDmvAVRhOIiVIC42szyer9pDN0V++btg/rC+Jkwq/O9enOE+fNGlF3xitYCDzkAEgAw==",
@@ -21,7 +16,6 @@ if __name__ == "__main__":
 
     for tx in txs:
         msg_type, msg = decode_tx.decode_tx(tx)
-        # print(msg)
 
         if msg_type == "2A2C87FA":
             from_addr, to_addr = decode_tx.get_addresses(msg)

@@ -1,4 +1,4 @@
-# Project Title
+# binance_chain_python_sample
 
 This is sample python code for decoing rpc api responnse.
 

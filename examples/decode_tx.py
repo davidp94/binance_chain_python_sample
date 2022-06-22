@@ -11,7 +11,7 @@ from google.protobuf.internal.decoder import _DecodeVarint
 from binance_chain import messages
 from binance_chain.environment import BinanceEnvironment
 from binance_chain.http import HttpApiClient
-from binance_chain.node_rpc.http import HttpRpcClient
+# from binance_chain.node_rpc.http import HttpRpcClient
 from binance_chain.protobuf import dex_pb2
 from binance_chain.utils import segwit_addr
 

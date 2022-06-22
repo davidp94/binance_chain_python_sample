@@ -69,5 +69,5 @@ def _amino_msg_type_to_class(msg_type: bytes):
             messages.FreezeMsg.AMINO_MESSAGE_TYPE: dex_pb2.TokenFreeze,
             messages.UnFreezeMsg.AMINO_MESSAGE_TYPE: dex_pb2.TokenUnfreeze,
             messages.TransferMsg.AMINO_MESSAGE_TYPE: dex_pb2.Send,
-            messages.VoteMsg.AMINO_MESSAGE_TYPE: dex_pb2.Vote,
+            # messages.VoteMsg.AMINO_MESSAGE_TYPE: dex_pb2.Vote,
     }.get(binascii.hexlify(msg_type).upper())

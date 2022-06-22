@@ -27,6 +27,7 @@ def decode_test():
                 result = json.loads(r.text)
 
                 account_info = decode_tx.decode_account_info(result['result']['response']['value'])
+                print(account_info)
                 balance = decode_tx.extract_account_total_balance(account_info, "BNB")
                 print(f'{addr} total balance : {balance}')
 
